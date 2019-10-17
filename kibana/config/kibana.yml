@@ -4,8 +4,11 @@
 #
 server.name: kibana
 server.host: "0"
-elasticsearch.hosts: [ "http://elasticsearch:9200" ]
+elasticsearch.hosts: ["http://elasticsearch:9200"]
 xpack.monitoring.ui.container.elasticsearch.enabled: true
+
+elasticsearch.requestHeadersWhitelist: [es-security-runas-user, authorization]
+xpack.monitoring.elasticsearch.requestHeadersWhitelist: [es-security-runas-user, authorization]
 
 ## X-Pack security credentials
 #
